@@ -26,10 +26,12 @@
       fade-img-on-scroll
     >
       <template v-slot:img="{ props }">
-        <v-img
+        <v-slide-x-transition>
+        <g-image
           v-bind="props"
           gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
-        ></v-img>
+        ></g-image>
+        </v-slide-x-transition>
       </template>
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -55,8 +57,8 @@
           align-with-title
           background-color="transparent"
         >
-          <v-tab>Home</v-tab>
-          <v-tab>About Us</v-tab>
+          <v-tab to="/">Home</v-tab>
+          <v-tab to="/about/">About Us</v-tab>
           <v-tab>Corporate</v-tab>
           <v-tab>Weddings</v-tab>
           <v-tab>Ethics</v-tab>
@@ -73,15 +75,12 @@
       <v-toolbar-title><g-link to="/">{{ $static.metadata.siteName }}</g-link></v-toolbar-title>
     </v-app-bar> -->
 
-    <v-content id="scrolling-techniques-3">
+    <v-content>
       <v-container
-        
-        class="fill-height"
+        class="fill-height pa-0"
         fluid
       >
-        <v-row no-gutters class="ma-3">
-          <slot />
-        </v-row>
+        <slot />    
       </v-container>
     </v-content>
 
