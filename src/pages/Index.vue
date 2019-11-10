@@ -2,45 +2,74 @@
   <Layout>
     <v-row no-gutters>
       <v-col cols="12" class="ma-0">
-        <v-parallax height="300" src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"></v-parallax>
+        <!-- <v-parallax height="300" src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"></v-parallax> -->
+      </v-col>
+    </v-row>
+    <v-row no-gutters>
+      <v-col v-for="n in 4" :key="`home-four${n}`" cols="12" sm="3" md="3" lg="3">
+        <g-image style="width:inherit;" src="https://images.squarespace-cdn.com/content/v1/541bf369e4b0c6a70bbb02b8/1546612592316-GHV0ZZJ72JKVRO0SS2MB/ke17ZwdGBToddI8pDm48kPqQfq0L3n3wpHIsRapTfg8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczo5Zn4xktlpMsMj-QlHXeMfNK6GwvtVkYEWiR8XAPyD3GfLCe_DXOSC_YcAacWL_/batch_DSCF82622.jpeg?format=500w"></g-image>
       </v-col>
     </v-row>
     <v-row class="ma-3">
       <v-col cols="12">
         <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-        <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-        <h1>Hello, world!</h1>
+        <h1 class="display-4 font-weight-bold text-capitalize">Hello, world!</h1>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+          smoklahoma is all about serving quality produce all cooked live on site using flavoured lump wood/charcoal giving that authentic barbecue taste we all crave for.
+we can cater for any number and will work to your needs giving guests an unforgettable experience.
+Any questions please ask and we look forward to hearing from you.
+In the meantime take a look at reviews/Facebook page (smoklahomapitbbq) to get an idea of what we're about or even better pop along to one of our many street food events and say hello and have a feed. 
         </p>
+        <p>
+          We provide catering at any event including private parties, corporate events and public events and festivals.
+        </p>
+        <p>
+          
+The Best!
+
+Smoklahoma were the perfect choice for us for our wedding! Food was delicious. Service was excellent and portion sizes were great. Everyone loved it! Thank you so much!
+Reviewed by: Kayleigh D
+
+        </p>
+        <p>
+          
+Outstanding Service- Colewood Summer BBQ
+
+The food was much better than our expectations, service was brilliant. Would recommend Smoklahoma for any event.
+Reviewed by: Joyce M
+
+        </p>
+
+        <p>
+Mouth-watering food and cool set up.
+
+We invited Mark and his team from Smoaklahoma Pitt BBQ to do our wedding evening meal and can't thank them enough for their fantastic work. Our guests are still talking about it. The set up fit perfectly into our barn and countryside wedding theme and my husband and I thoroughly enjoyed the food. Talking to our guests, it's obvious just how impressed everybody was with the food and amazing Smoklahoma team. We'd book again in a flash and would recommend them highly. Thanks a lot! Phil and Steph
+Reviewed by: Stephanie L
+</p>
+        <p>
+          
+The Best!
+
+Smoklahoma were the perfect choice for us for our wedding! Food was delicious. Service was excellent and portion sizes were great. Everyone loved it! Thank you so much!
+Reviewed by: Kayleigh D
+
+        </p>
+        <p>
+          
+Outstanding Service- Colewood Summer BBQ
+
+The food was much better than our expectations, service was brilliant. Would recommend Smoklahoma for any event.
+Reviewed by: Joyce M
+
+        </p>
+
+        <p>
+Mouth-watering food and cool set up.
+
+We invited Mark and his team from Smoaklahoma Pitt BBQ to do our wedding evening meal and can't thank them enough for their fantastic work. Our guests are still talking about it. The set up fit perfectly into our barn and countryside wedding theme and my husband and I thoroughly enjoyed the food. Talking to our guests, it's obvious just how impressed everybody was with the food and amazing Smoklahoma team. We'd book again in a flash and would recommend them highly. Thanks a lot! Phil and Steph
+Reviewed by: Stephanie L
+</p>
 
         <p class="home-links">
           <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>

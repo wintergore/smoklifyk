@@ -18,20 +18,18 @@
     </v-navigation-drawer>
     <v-app-bar
       app
-      color="#6A76AB"
+      color="rgba(0,0,0,.35)"
       dark
-      shrink-on-scroll
-      prominent
-      src="https://picsum.photos/1920/1080?random"
-      fade-img-on-scroll
+
+      hide-on-scroll
+      
     >
       <template v-slot:img="{ props }">
-        <v-slide-x-transition>
         <g-image
           v-bind="props"
           gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+          src="https://picsum.photos/1920/1080?random"
         ></g-image>
-        </v-slide-x-transition>
       </template>
 
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -67,6 +65,7 @@
         </v-tabs>
       </template>
     </v-app-bar>
+    <!-- <v-parallax height="300" src="https://picsum.photos/1920/1080?random"></v-parallax> -->
     <!-- <v-app-bar
       app
       clipped-left
@@ -75,7 +74,7 @@
       <v-toolbar-title><g-link to="/">{{ $static.metadata.siteName }}</g-link></v-toolbar-title>
     </v-app-bar> -->
 
-    <v-content>
+    <v-content><!-- class="pt-0" -->
       <v-container
         class="fill-height pa-0"
         fluid
