@@ -11,6 +11,10 @@
     "@gridsome/transformer-remark": "^0.4.0",
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
-    "netlify-cms": "^2.9.7"
+    "netlify-cms": "^2.9.7",
+    "vuetify": "^2.1.9"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^1.7.2"
   }
 }
