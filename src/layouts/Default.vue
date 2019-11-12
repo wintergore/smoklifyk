@@ -1,5 +1,5 @@
 <template>
-  <v-app id="app" >
+  <v-app id="app">
     <v-navigation-drawer
       v-model="drawer"
       app
@@ -18,20 +18,20 @@
     </v-navigation-drawer>
     <v-app-bar
       app
-      color="rgba(0,0,0,.35)"
       dark
-
+      color="rgba(0,0,0,.35)"
+      height="50"
       hide-on-scroll
-      
+
     >
       <template v-slot:img="{ props }">
         <g-image
           v-bind="props"
           gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
-          src="https://picsum.photos/1920/1080?random"
+          src="/uploads/002.jpg"
         ></g-image>
       </template>
-
+      <v-spacer />
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
       <v-toolbar-title>{{ $static.metadata.siteName }}</v-toolbar-title>
@@ -49,12 +49,13 @@
       <v-btn icon>
         <v-icon>mdi-dots-vertical</v-icon>
       </v-btn>
-
+      <v-spacer />
       <template v-slot:extension>
         <v-tabs
           align-with-title
           background-color="transparent"
         >
+        <v-spacer />
           <v-tab to="/">Home</v-tab>
           <v-tab to="/about/">About Us</v-tab>
           <v-tab>Corporate</v-tab>
@@ -62,6 +63,7 @@
           <v-tab>Ethics</v-tab>
           <v-tab>Contact</v-tab>
           <v-tab>Gallery</v-tab>
+          <v-spacer />
         </v-tabs>
       </template>
     </v-app-bar>
@@ -79,7 +81,7 @@
         class="fill-height pa-0"
         fluid
       >
-        <slot />    
+        <slot />
       </v-container>
     </v-content>
 
@@ -103,7 +105,7 @@ query {
       source: String,
     },
     data: () => ({
-      drawer: null,
+      drawer: false,
     }),
     created () {
       //this.$vuetify.theme.dark = true

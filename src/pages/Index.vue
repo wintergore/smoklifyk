@@ -7,14 +7,14 @@
     </v-row>
     <v-row no-gutters>
       <v-col v-for="n in 4" :key="`home-four${n}`" cols="12" sm="3" md="3" lg="3">
-        <g-image style="width:inherit;" src="https://images.squarespace-cdn.com/content/v1/541bf369e4b0c6a70bbb02b8/1546612592316-GHV0ZZJ72JKVRO0SS2MB/ke17ZwdGBToddI8pDm48kPqQfq0L3n3wpHIsRapTfg8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczo5Zn4xktlpMsMj-QlHXeMfNK6GwvtVkYEWiR8XAPyD3GfLCe_DXOSC_YcAacWL_/batch_DSCF82622.jpeg?format=500w"></g-image>
+          <g-image :src="`/uploads/00${n}.jpg`" style="height: auto; width: 100%;" width="500" height="500" fit="contain"/>
       </v-col>
     </v-row>
     <v-row class="ma-3">
       <v-col cols="12">
         <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-        <h1 class="display-4 font-weight-bold text-capitalize">Hello, world!</h1>
-
+        <h1 class="display-4 font-weight-bold text-capitalize">{{ $static.post.title }}!</h1>
+        <p>{{ $static.post.content }}</p>
         <p>
           smoklahoma is all about serving quality produce all cooked live on site using flavoured lump wood/charcoal giving that authentic barbecue taste we all crave for.
 we can cater for any number and will work to your needs giving guests an unforgettable experience.
@@ -87,6 +87,17 @@ export default {
   }
 };
 </script>
+
+<static-query>
+query {
+  post(path: "/posts/my-first-post/") {
+    title
+    excerpt
+    date
+    content
+  }
+}
+</static-query>
 
 <style>
 .home-links a {
