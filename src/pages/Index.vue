@@ -2,7 +2,19 @@
   <Layout>
     <v-row no-gutters>
       <v-col cols="12" class="ma-0">
-        <!-- <v-parallax height="300" src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"></v-parallax> -->
+        <v-parallax dark src="/uploads/030.jpg" height="480">
+        <template>
+          <v-row
+            align="center"
+            justify="center"
+          >
+            <v-col class="text-center mt-12" cols="12" md="10" lg="6">
+              <h4 class="title text-uppercase mb-3">Welcome to smoklahoma, we love providing amazing wedding catering  and barbeque inspired menus for events.</h4>
+              <h1 class="title text-uppercase ">Specialists in smoke, fire &amp; beautiful food!</h1>
+            </v-col>
+          </v-row>
+        </template>
+        </v-parallax>
       </v-col>
     </v-row>
     <v-row no-gutters>
@@ -10,11 +22,19 @@
           <g-image :src="`/uploads/00${n}.jpg`" style="height: auto; width: 100%;" width="500" height="500" fit="contain"/>
       </v-col>
     </v-row>
-    <v-row class="ma-3">
-      <v-col cols="12">
+    <v-row class="ma-3 flex-row-reverse" style="max-width: 1000px; margin: 0 auto !important;">
+      <v-col cols="2" class="text-uppercase">
+        <h1 class="overline">Contact Mark:</h1>
+        <p class="title">
+          01234567890
+        </p>       
+        <h1 class="overline">Location:</h1>
+        <p class="title">Middlesbrough</p>
+      </v-col>
+      <v-col cols="10">
         <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-        <h1 class="display-4 font-weight-bold text-capitalize">{{ $static.post.title }}!</h1>
-        <p>{{ $static.post.content }}</p>
+        <h1 class="display-2 font-weight-bold text-uppercase">Catering for private parties, corporate events, public events and festivals!</h1>
+        <div v-html="$static.post.content"></div>
         <p>
           smoklahoma is all about serving quality produce all cooked live on site using flavoured lump wood/charcoal giving that authentic barbecue taste we all crave for.
 we can cater for any number and will work to your needs giving guests an unforgettable experience.
@@ -69,6 +89,7 @@ Mouth-watering food and cool set up.
 
 We invited Mark and his team from Smoaklahoma Pitt BBQ to do our wedding evening meal and can't thank them enough for their fantastic work. Our guests are still talking about it. The set up fit perfectly into our barn and countryside wedding theme and my husband and I thoroughly enjoyed the food. Talking to our guests, it's obvious just how impressed everybody was with the food and amazing Smoklahoma team. We'd book again in a flash and would recommend them highly. Thanks a lot! Phil and Steph
 Reviewed by: Stephanie L
+Mouth-watering food and cool set up.
 </p>
 
         <p class="home-links">

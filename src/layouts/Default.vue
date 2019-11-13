@@ -16,56 +16,44 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
+    <!-- worry about all the fancy shit after you have the actual content done. -->
+    <!-- then just have a thing at the top -->
+    <!-- page scroll listener, toggles inverted scroll flag. -->
     <v-app-bar
       app
       dark
-      color="rgba(0,0,0,.35)"
-      height="50"
-      hide-on-scroll
-
+      color="rgba(0,0,0,.15)"
+      shrink-on-scroll
+      
+      height="100"
     >
       <template v-slot:img="{ props }">
         <g-image
           v-bind="props"
-          gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
-          src="/uploads/002.jpg"
+          style="background-color:rgba(0,0,0,.15); width: 100%; height: 100%;"
         ></g-image>
       </template>
-      <v-spacer />
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-
-      <v-toolbar-title>{{ $static.metadata.siteName }}</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-      <v-spacer />
-      <template v-slot:extension>
-        <v-tabs
+      
+      <v-app-bar-nav-icon v-if="$vuetify.breakpoint.smAndDown" @click.stop="drawer = !drawer" />
+      
+      <v-tabs
           align-with-title
           background-color="transparent"
         >
-        <v-spacer />
+          <v-spacer />
           <v-tab to="/">Home</v-tab>
           <v-tab to="/about/">About Us</v-tab>
           <v-tab>Corporate</v-tab>
+          <div style="width: 180px;" class="d-flex align-center justify-center">
+          <g-image src="/logo.png" style="height: 100%;" class="align-self-center py-3" />
+          </div>
           <v-tab>Weddings</v-tab>
           <v-tab>Ethics</v-tab>
           <v-tab>Contact</v-tab>
           <v-tab>Gallery</v-tab>
           <v-spacer />
         </v-tabs>
-      </template>
+        
     </v-app-bar>
     <!-- <v-parallax height="300" src="https://picsum.photos/1920/1080?random"></v-parallax> -->
     <!-- <v-app-bar
@@ -76,7 +64,7 @@
       <v-toolbar-title><g-link to="/">{{ $static.metadata.siteName }}</g-link></v-toolbar-title>
     </v-app-bar> -->
 
-    <v-content><!-- class="pt-0" -->
+    <v-content class="pt-0">
       <v-container
         class="fill-height pa-0"
         fluid
@@ -113,5 +101,16 @@ query {
   }
 </script>
 
-<style>
+<style lang="scss">
+// .v-application .v-application--wrap header {
+//   color: red;
+//   &.v-app-bar--is-scrolled {
+//   color: red !important;
+//   background-color: rgba(0,0,0,.95) !important;
+// }
+// }
+// .v-app-bar--is-scrolled {
+//   color: red;
+//   background-color: rgba(0,0,0,.95);
+// }
 </style>
